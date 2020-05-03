@@ -124,7 +124,7 @@ function addManager() {
 function addEngineer() {
     inquirer.prompt(engineerQuestions).then(function (answers) {
         // Initialize a new engineer object
-        const newEngineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.githubUsername)
+        const newEngineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithubUsername)
         // add the newly added engineer to the employee list array and restart the question
         teamMembers.push(newEngineer);
         init()
