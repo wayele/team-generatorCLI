@@ -105,7 +105,7 @@ const init = () => {
         else if (answers.addTeamMember === "Intern") {
             addIntern();
         } else {
-            myFunc(render(teamMembers));
+            writeHTML(render(teamMembers));
             // myFunc(render(teamMembers))
         }
     })
@@ -142,7 +142,7 @@ function addIntern() {
 };
 
 // create a function for the html output file
-function myFunc() {
+function writeHTML() {
     fs.writeFile(outputPath, render(teamMembers), function (err) {
         if (err) {
             console.log(err);
